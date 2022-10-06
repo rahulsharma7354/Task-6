@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style/Index.css"> 
+    <link rel="stylesheet" href="/style/form.css">
     <script
     src="https://code.jquery.com/jquery-3.6.1.min.js"
     integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
@@ -24,16 +25,17 @@
     </div> 
     <ul class="bar">
         <li class="bar-element" ><a href="#home"> HOME</a></li>
-        <li class="bar-element add-item"><a href="/form.html" target="_blank">+ADD</a></li>
+        <li class="bar-element add-item"><a class="add-items">+ADD</a></li>
         <li class="icon">
           <img class="icon" src="/images/blog-icon.png" alt="Blog Icon" />
         </li>
     </ul>
 </header>
 <body>
-    <h3 class="contact-heading">CONTACTS</h3>
     <div class="container">
+    
     <section class="people-queue">
+        <h3 class="contact-heading">CONTACTS</h3>
         <div class="first-person" >
             <h1 class="first-person-name"></h1>
             <p class="first-person-email"></p>
@@ -55,7 +57,30 @@
             <p class="fourth-person-number"></p>
         </div>
     </section>
+    
     <section class="info-section">
+        <form class="form" action="">
+            <p class="name">Name </p>
+            <input class="input-name" type="text">
+            <p class="form-email">Email </p>
+            <input class="input-email"type="email">
+            <div class="container">
+            <div class="mobile-number">
+                <p id="mobileNumber">Mobile </p>
+                <input class="input-mobile" type="number">
+            </div>
+            <div class="landline-number">
+                <p id="landlineNumber">Landline </p>
+                <input class="input-landline" type="number">
+            </div>
+            </div>
+            <p id="personWebsite">Website </p>
+            <input class="input-website" type="text">
+            <p id="address">Address </p>
+            <textarea class="input-address" name="" id="" cols="50" rows="7.5"></textarea>
+            <span class="form-submit-button" type="">Add</span>
+        </form>
+        <div class="person-info">
         <div>
         <h2 class="person-name"></h2>
         <span class="icons">
@@ -70,8 +95,8 @@
         <p class="landline">Landline: <span class="landline-number"></span></p>
         <p class="website">Website: <span class="person-website"></span></p>
         <p class="address">Address:  <span class="person-address"></span></p>
+    </div>
     </section>
     </div>
     <script src="/javaScript/form.js"></script>
-    <script src="/javaScript/index.js"></script>
 </body>
