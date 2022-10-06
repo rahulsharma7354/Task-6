@@ -1,0 +1,83 @@
+.form{
+    width: 35%;
+    margin-top: 3%;
+    margin-left: 35%;
+}
+.contact{
+    display: flex;
+}
+.name{
+    font-size: 0.8rem;
+    margin-bottom: 0px ;
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+.input-name{
+    width: 70%;
+    height: 1.5rem;
+}
+.form-email{
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+.input-email{
+    width: 70%;
+    margin-top: 0px;
+    height: 1.5rem;
+}
+#mobileNumber{
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+.input-mobile{
+    height: 1.5rem;
+    width: 100%;
+}
+.landline-number{
+    margin-left: 2rem;
+}
+#landlineNumber{
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+.input-landline{
+    height: 1.5rem;
+    width: 100%;
+}
+#personWebsite{
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+.input-website{
+    width: 70%;
+    height: 1.5rem;
+}
+.input-address{
+    display: block;
+}
+#address{
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-family: 'Hind', sans-serif;
+}
+.form-submit-button{
+    font-family: 'Hind', sans-serif;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-right: 4.1rem;
+    background-color: rgb(46, 130, 3);
+    float: right;
+    width: 5rem;
+    color: white;
+    border-color: white;
+    height: 1.7rem;
+}

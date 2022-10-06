@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHNOVERT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/Index.css"> 
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+</head>
+<header>
+    <div class="header-section">
+        <h1 class="header-content">Address Book</h1>
+    </div> 
+    <ul class="bar">
+        <li class="bar-element" ><a href="#home"> HOME</a></li>
+        <li class="bar-element add-item"><a href="/form.html" target="_blank">+ADD</a></li>
+        <li class="icon">
+          <img class="icon" src="/images/blog-icon.png" alt="Blog Icon" />
+        </li>
+    </ul>
+</header>
+<body>
+    <h3 class="contact-heading">CONTACTS</h3>
+    <div class="container">
+    <section class="people-queue">
+        <div class="first-person" >
+            <h1 class="first-person-name"></h1>
+            <p class="first-person-email"></p>
+            <p class="first-person-number"></p>
+        </div>
+        <div class="second-person">
+            <h1 class="second-person-name"></h1>
+            <p class="second-person-email"></p>
+            <p class="second-person-number"></p>
+        </div>
+        <div class="third-person">
+            <h1 class="third-person-name"></h1>
+            <p class="third-person-email"></p>
+            <p class="third-person-number"></p>
+        </div>
+        <div class="fourth-person">
+            <h1 class="fourth-person-name"></h1>
+            <p class="fourth-person-email"></p>
+            <p class="fourth-person-number"></p>
+        </div>
+    </section>
+    <section class="info-section">
+        <div>
+        <h2 class="person-name"></h2>
+        <span class="icons">
+        <img src="/images/edit1.jpg" alt=""width=8%>
+        <span class="edit">EDIT</span>
+        <img src="/images/delete1.png" alt=""width=8%>
+        <span class="delete">DELETE</span>
+        </span>
+        </div>
+        <p class="email">Email: <span class="person-email"></span></p>
+        <p class="phone">Mobile: <span class="phone-number"></span></p>
+        <p class="landline">Landline: <span class="landline-number"></span></p>
+        <p class="website">Website: <span class="person-website"></span></p>
+        <p class="address">Address:  <span class="person-address"></span></p>
+    </section>
+    </div>
+    <script src="/javaScript/form.js"></script>
+    <script src="/javaScript/index.js"></script>
+</body>

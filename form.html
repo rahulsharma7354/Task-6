@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/form.css">
+    <link rel="stylesheet" href="/style/index.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+</head>
+<header>
+    <div class="header-section">
+        <h1 class="header-content">Address Book</h1>
+    </div>
+    <ul class="bar">
+        <li class="bar-element"><a href="/index.html"> HOME</a></li>
+        <li class="bar-element Add-item"><a href="#addItem">+ADD</a></li>
+        <li class="icon">
+            <img class="icon" src="/images/blog-icon.png" alt="Blog Icon" />
+        </li>
+    </ul>
+</header>
+
+<body>
+    <form class="form" action="">
+        <p class="name">Name </p>
+        <input class="input-name" type="text">
+        <p class="form-email">Email </p>
+        <input class="input-email"type="email">
+        <div class="container">
+        <div class="mobile-number">
+            <p id="mobileNumber">Mobile </p>
+            <input class="input-mobile" type="number">
+        </div>
+        <div class="landline-number">
+            <p id="landlineNumber">Landline </p>
+            <input class="input-landline" type="number">
+        </div>
+        </div>
+        <p id="personWebsite">Website </p>
+        <input class="input-website" type="text">
+        <p id="address">Address </p>
+        <textarea class="input-address" name="" id="" cols="50" rows="10"></textarea>
+        <button class="form-submit-button" type="">Add</button>
+
+    </form>
+    <script src="/javaScript/form.js"></script>
+    <script src="/javaScript/index.js"></script>
+</body>
+
+</html>
