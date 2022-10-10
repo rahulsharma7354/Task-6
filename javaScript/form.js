@@ -16,7 +16,13 @@ $(function () {
         $(".form-submit-button").addClass("hide");
         $(".form-edit-submit-button").removeClass("hide");
         $(".form-edit-submit-button").addClass("show");
-        if (person == personname[0]) {
+        if (person == personname[0]){
+            $(".input-name").val(personname[0]);
+            $(".input-email").val(personemail[0]);
+            $(".input-mobile").val(personmobile[0]);
+            $(".input-landline").val(personlandline[0]);
+            $(".input-website").val(personwebsite[0]);
+            $(".input-address").val(personaddress[0]);
             $(".form-edit-submit-button").click(function () {
                 var name = $(".input-name").val();
                 var email = $(".input-email").val();
@@ -36,9 +42,9 @@ $(function () {
                 $(".landline-number").html(" 0 " + personlandline[0]);
                 $(".person-website").html(personwebsite[0]);
                 $("person-address").html(personaddress[0]);
-                $(".first-person-name").html(name);
-                $(".first-person-email").html(email);
-                $(".first-person-number").html(mobile);
+                $(".first-person-name").html(personname[0]);
+                $(".first-person-email").html(personemail[0]);
+                $(".first-person-number").html(personmobile[0]);
                 $(".form")[0].reset();
                 $(".form").removeClass("show");
                 $(".person-info").removeClass("hide");
@@ -46,6 +52,12 @@ $(function () {
             })
         }
          else if (person == personname[1]) {
+            $(".input-name").val(personname[1]);
+            $(".input-email").val(personemail[1]);
+            $(".input-mobile").val(personmobile[1]);
+            $(".input-landline").val(personlandline[1]);
+            $(".input-website").val(personwebsite[1]);
+            $(".input-address").val(personaddress[1]);
             $(".form-edit-submit-button").click(function () {
                 var name = $(".input-name").val();
                 var email = $(".input-email").val();
@@ -65,9 +77,9 @@ $(function () {
                 $(".landline-number").html(" 0 " + personlandline[1]);
                 $(".person-website").html(personwebsite[1]);
                 $("person-address").html(personaddress[1]);
-                $(".second-person-name").html(name);
-                $(".second-person-email").html(email);
-                $(".second-person-number").html(mobile);
+                $(".second-person-name").html(personname[1]);
+                $(".second-person-email").html(personemail[1]);
+                $(".second-person-number").html(personmobile[1]);
                 $(".form")[0].reset();
                 $(".form").removeClass("show");
                 $(".person-info").removeClass("hide");
@@ -75,6 +87,12 @@ $(function () {
             })
         }
         else if (person == personname[2]) {
+            $(".input-name").val(personname[2]);
+            $(".input-email").val(personemail[2]);
+            $(".input-mobile").val(personmobile[2]);
+            $(".input-landline").val(personlandline[2]);
+            $(".input-website").val(personwebsite[2]);
+            $(".input-address").val(personaddress[2]);
             $(".form-edit-submit-button").click(function () {
                 var name = $(".input-name").val();
                 var email = $(".input-email").val();
@@ -94,9 +112,9 @@ $(function () {
                 $(".landline-number").html(" 0 " + personlandline[2]);
                 $(".person-website").html(personwebsite[2]);
                 $("person-address").html(personaddress[2]);
-                $(".third-person-name").html(name);
-                $(".third-person-email").html(email);
-                $(".third-person-number").html(mobile);
+                $(".third-person-name").html(personname[2]);
+                $(".third-person-email").html(personemail[2]);
+                $(".third-person-number").html(personmobile[2]);
                 $(".form")[0].reset();
                 $(".form").removeClass("show");
                 $(".person-info").removeClass("hide");
@@ -104,6 +122,12 @@ $(function () {
             })
         }
         else {
+            $(".input-name").val(personname[3]);
+            $(".input-email").val(personemail[3]);
+            $(".input-mobile").val(personmobile[3]);
+            $(".input-landline").val(personlandline[3]);
+            $(".input-website").val(personwebsite[3]);
+            $(".input-address").val(personaddress[3]);
             $(".form-edit-submit-button").click(function () {
                 var name = $(".input-name").val();
                 var email = $(".input-email").val();
@@ -133,8 +157,8 @@ $(function () {
             })
         }
     })
-
-    $(".form-submit-button").click(function () {
+    $(".form-submit-button").click(function validateForm() {
+        
         var name = $(".input-name").val();
         var email = $(".input-email").val();
         var mobile = $(".input-mobile").val();
@@ -145,6 +169,68 @@ $(function () {
         var secondName = $(".second-person-name").html();
         var thirdName = $(".third-person-name").html();
         //var forthName = $(".forth-person-name").html();
+        var res=true;
+        if(name.length==0){
+            $(".name-feild-required").removeClass("hide");
+            $(".email-feild-required").addClass("hide");
+            $(".mobile-feild-required").addClass("hide");
+            $(".landline-feild-required").addClass("hide");
+            $(".website-feild-required").addClass("hide");
+            $(".address-feild-required").addClass("hide");
+            res=false;
+        }
+        else if(email.length==0){
+            $(".email-feild-required").removeClass("hide");
+            $(".name-feild-required").addClass("hide");
+            $(".mobile-feild-required").addClass("hide");
+            $(".landline-feild-required").addClass("hide");
+            $(".website-feild-required").addClass("hide");
+            $(".address-feild-required").addClass("hide");
+            res=false;
+        }
+        else if(mobile.length==0){
+            $(".mobile-feild-required").removeClass("hide");
+            $(".email-feild-required").addClass("hide");
+            $(".name-feild-required").addClass("hide");
+            $(".landline-feild-required").addClass("hide");
+            $(".website-feild-required").addClass("hide");
+            $(".address-feild-required").addClass("hide");
+            res=false;
+        }
+        else if(landline.length==0){
+            $(".mobile-feild-required").addClass("hide");
+            $(".email-feild-required").addClass("hide");
+            $(".name-feild-required").addClass("hide");
+            $(".website-feild-required").addClass("hide");
+            $(".address-feild-required").addClass("hide");
+            $(".landline-feild-required").removeClass("hide");
+            res=false;
+        }
+        else if(website.length==0){
+            $(".mobile-feild-required").addClass("hide");
+            $(".email-feild-required").addClass("hide");
+            $(".name-feild-required").addClass("hide");
+            $(".address-feild-required").addClass("hide");
+            $(".landline-feild-required").addClass("hide");
+            $(".website-feild-required").removeClass("hide");
+            res=false;
+        }
+        else if(address.length==0){
+            $(".mobile-feild-required").addClass("hide");
+            $(".email-feild-required").addClass("hide");
+            $(".name-feild-required").addClass("hide");
+            $(".website-feild-required").addClass("hide");
+            $(".landline-feild-required").addClass("hide");
+            $(".address-feild-required").removeClass("hide");
+            res=false;
+        }
+        if(res==true){
+            $(".mobile-feild-required").addClass("hide");
+            $(".email-feild-required").addClass("hide");
+            $(".name-feild-required").addClass("hide");
+            $(".website-feild-required").addClass("hide");
+            $(".landline-feild-required").addClass("hide");
+            $(".address-feild-required").addClass("hide");
         if (firstName.length == 0){
             $(".first-person").addClass("border");
             personname[0] = name;
@@ -205,6 +291,9 @@ $(function () {
             $(".form").removeClass("show");
             $(".person-info").removeClass("hide");
         }
+    }else{
+        return res;
+    }
     })
     $(".first-person").click(function () {
         $(".first-person").addClass("blue");
@@ -256,9 +345,6 @@ $(function () {
         $(".person-website").html(personwebsite[3]);
         $(".person-address").html(personaddress[3]);
     })
-    
-
-
 })
 
 

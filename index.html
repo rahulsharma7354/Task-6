@@ -58,27 +58,27 @@
         </div>
     </section>
     <section class="info-section">
-        <form class="form" action="">
+        <form class="form" action="" onsubmit="return validateForm()">
             <p class="name">Name </p>
-            <input class="input-name" type="text" required>
+            <input class="input-name" type="text" required="required"><span class="hide red name-feild-required"> *Required</span>
             <p class="form-email">Email </p>
-            <input class="input-email"type="email" required>
+            <input class="input-email"type="email" required="required"><span class="hide red email-feild-required"> *Required</span>
             <div class="container">
             <div class="mobile-number">
                 <p id="mobileNumber">Mobile </p>
-                <input class="input-mobile" type="number" required>
+                <input class="input-mobile" type="number" required="required"><span class="hide red mobile-feild-required"> *Req</span>
             </div>
             <div class="landline-number-text">
                 <p id="landlineNumber">Landline </p>
-                <input class="input-landline" type="number" required>
+                <input class="input-landline" type="number" required="required"><span class="hide red landline-feild-required"> *Required</span>
             </div>
             </div>
             <p id="personWebsite">Website </p>
-            <input class="input-website" type="text" required>
+            <input class="input-website" type="text" required="required"><span class="hide red website-feild-required"> *Required</span>
             <p id="address">Address &nbsp</p>
-            <textarea class="input-address" cols="30" rows="10" required></textarea>
-            <span class="form-submit-button show" type="">Add</span>
-            <span class="form-edit-submit-button hide" type="">Add</span>
+            <textarea class="input-address" cols="30" rows="10" required="required"></textarea><span class="hide red address-feild-required"> *Required</span>
+            <span class="form-submit-button show submit-button" type="submit" value="submit">Add</span>
+            <span class="form-edit-submit-button hide submit-button" type="submit" value="submit">Add</span>
         </form>
         <div class="person-info">
         <div>
