@@ -84,8 +84,7 @@ li.icon {
 }
 
 .first-person {
-  width: 99.5%;
-  height: 24.75%;
+  height: 25%;
 }
 
 .first-person-name {
@@ -182,12 +181,8 @@ li.icon {
   margin-top: 0px;
   margin-bottom: 0px;
 }
-.border{
-  border: 1px solid rgb(155, 152, 152);
-}
 .boundary{
   border: 1px solid rgb(155, 152, 152);
-  border-top: 0px;
 }
 .fourth-person {
   width: 99.5%;

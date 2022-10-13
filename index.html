@@ -24,7 +24,7 @@
         <h1 class="header-content">Address Book</h1>
     </div> 
     <ul class="bar">
-        <li class="bar-element" ><a href="#home"> HOME</a></li>
+        <li class="bar-element home" ><a href="#home"> HOME</a></li>
         <li class="bar-element add-item"><a class="add-items">+ADD</a></li>
         <li class="icon">
           <img class="icon" src="/images/blog-icon.png" alt="Blog Icon" />
@@ -36,31 +36,16 @@
     
     <section class="people-queue">
         <h3 class="contact-heading">CONTACTS</h3>
-        <div class="first-person" >
-            <h1 class="first-person-name input"></h1>
+        <div class="first-person showUsers" id="firstPerson">
+            <!-- <h1 class="first-person-name input"></h1>
             <p class="first-person-email"></p>
-            <p class="first-person-number"></p>
-        </div>
-        <div class="second-person">
-            <h1 class="second-person-name input"></h1>
-            <p class="second-person-email"></p>
-            <p class="second-person-number"></p>
-        </div>
-        <div class="third-person">
-            <h1 class="third-person-name input"></h1>
-            <p class="third-person-email"></p>
-            <p class="third-person-number"></p>
-        </div>
-        <div class="fourth-person">
-            <h1 class="fourth-person-name input"></h1>
-            <p class="fourth-person-email"></p>
-            <p class="fourth-person-number"></p>
+            <p class="first-person-number"></p> -->
         </div>
     </section>
     <section class="info-section">
         <form class="form" action="" onsubmit="return validateForm()">
             <p class="name">Name </p>
-            <input class="input-name" type="text" required="required"><span class="hide red name-feild-required"> *Required</span>
+            <input class="input-name" id="name" type="text" required="required"><span class="hide red name-feild-required"> *Required</span>
             <p class="form-email">Email </p>
             <input class="input-email"type="email" required="required"><span class="hide red email-feild-required"> *Required</span>
             <div class="container">
