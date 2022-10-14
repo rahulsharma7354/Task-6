@@ -5,7 +5,8 @@
     display: none;
     border: 1px solid black;
     box-shadow: rgba(13, 26, 31, 0.12) 3px 3px 3px 3px, rgba(14, 30, 37, 0.32) 3px 3px 16px 3px;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 .show{
     display: block;
@@ -91,6 +92,21 @@
     margin-bottom: 0px;
     font-weight: 900;
     font-family: 'Hind', sans-serif;
+}
+.second-containe{
+    display: flex;
+}
+.cancle{
+    font-family: 'Hind', sans-serif;
+    font-size: 14px;
+    background-color:rgb(46, 130, 3) ;
+    color: white;
+    padding-left: 2rem;
+    width: 4.8rem;
+    padding-top: 8px;
+    height: 1.6rem;
+    margin-top: 1%;
+    margin-left: 24rem;
 }
 .form-submit-button{
     font-family: 'Hind', sans-serif;

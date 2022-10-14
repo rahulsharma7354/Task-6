@@ -18,30 +18,30 @@ $(function () {
         showData();
         location.reload();
     })
-
-    $(".edit").click( function () {
-        var i = window.updateindex;
-        alert(i);
-        $(".form-submit-button").addClass("hide");
-        $(".form-edit-submit-button").removeClass("hide");
-        $(".form-edit-submit-button").addClass("show");
+    function setformvalue(i){
         $(".input-name").val(userrecord[i].name);
         $(".input-email").val(userrecord[i].email);
         $(".input-mobile").val(userrecord[i].number);
         $(".input-landline").val(userrecord[i].landline);
         $(".input-website").val(userrecord[i].website);
         $(".input-address").val(userrecord[i].address);
+    }
+    $(".edit").click( function () {
+        var i = window.updateindex;
+        $(".form-submit-button").addClass("hide");
+        $(".form-edit-submit-button").removeClass("hide");
+        $(".form-edit-submit-button").addClass("show");
+        setformvalue(i);
         $(".person-info").addClass("hide");
         $(".form").addClass("show");
         })
         $(".form-edit-submit-button").click(function () {
-            
-            var editname = $(".input-name").val();
-            var editemail= $(".input-email").val();
-            var editmobile= $(".input-mobile").val();
-            var editlandline = $(".input-landline").val();
-            var editwebsite = $(".input-website").val();
-            var editaddress = $(".input-address").val();
+            var editname = name();
+            var editemail= email();
+            var editmobile= mobile();
+            var editlandline = landline();
+            var editwebsite = website();
+            var editaddress = address();
             var i = window.updateindex;
             userrecord[i]={
                    "name":editname,
@@ -78,22 +78,22 @@ $(function () {
         }
     }
     function confirmed() {
-        var name = $(".input-name").val();
-        var email= $(".input-email").val();
-        var mobile= $(".input-mobile").val();
-        var landline = $(".input-landline").val();
-        var website = $(".input-website").val();
-        var address = $(".input-address").val();
+        var confirmedname = name();
+        var confirmedemail= email();
+        var confirmedmobile= mobile();
+        var confirmedlandline = landline();
+        var confirmedwebsite =website();
+        var confirmedaddress = address();
         let user_records = new Array();
         user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
         
             user_records.push({
-                "name": name,
-                "email": email,
-                "number": mobile,
-                "landline":landline,
-                "website":website,
-                "address":address
+                "name": confirmedname,
+                "email": confirmedemail,
+                "number": confirmedmobile,
+                "landline":confirmedlandline,
+                "website":confirmedwebsite,
+                "address":confirmedaddress
             })
             localStorage.setItem("users", JSON.stringify(user_records));
             showData();
@@ -102,89 +102,76 @@ $(function () {
             $(".person-info").removeClass("hide"); 
               
     }
+      $(".cancle").click(function () {
+        $(".form")[0].reset()
+        $(".form").removeClass("show");
+        $(".person-info").removeClass("hide"); 
+      })
+
       $(".form-submit-button").click(function validateForm(){
-        var name = $(".input-name").val();
-        var email = $(".input-email").val();
-        var mobile = $(".input-mobile").val();
-        var landline = $(".input-landline").val();
-        var website = $(".input-website").val();
-        var address = $(".input-address").val();
+        var inputname = name();
+        var inputemail = email();
+        var inputmobile = mobile();
+        var inputlandline =landline();
+        var inputwebsite = website();
+        var inputaddress = address();
         var res=true;
-
-        hideAllRequiredErrors();
-        {
-            $(".email-feild-required").addClass("hide");
-            $(".mobile-feild-required").addClass("hide");
-            $(".landline-feild-required").addClass("hide");
-            $(".website-feild-required").addClass("hide");
-            $(".address-feild-required").addClass("hide");
-            $(".name-feild-required").addClass("hide");
-        }
-        if(name.length==0){
-            
-            
+        if(inputname.length==0){
+            $(".name-feild-required").removeClass("hide");
             res=false;
         }
-        checkIfValid(name, ".name-feild-required")
-
-        if(email.length==0){
+        if(inputemail.length==0){
             $(".email-feild-required").removeClass("hide");
-            $(".name-feild-required").addClass("hide");
-            $(".mobile-feild-required").addClass("hide");
-            $(".landline-feild-required").addClass("hide");
-            $(".website-feild-required").addClass("hide");
-            $(".address-feild-required").addClass("hide");
             res=false;
         }
-        else if(mobile.length==0){
+        if(inputmobile.length==0){
             $(".mobile-feild-required").removeClass("hide");
-            $(".email-feild-required").addClass("hide");
-            $(".name-feild-required").addClass("hide");
-            $(".landline-feild-required").addClass("hide");
-            $(".website-feild-required").addClass("hide");
-            $(".address-feild-required").addClass("hide");
             res=false;
         }
-        else if(landline.length==0){
-            $(".mobile-feild-required").addClass("hide");
-            $(".email-feild-required").addClass("hide");
-            $(".name-feild-required").addClass("hide");
-            $(".website-feild-required").addClass("hide");
-            $(".address-feild-required").addClass("hide");
+        if(inputlandline.length==0){
             $(".landline-feild-required").removeClass("hide");
             res=false;
         }
-        else if(website.length==0){
-            $(".mobile-feild-required").addClass("hide");
-            $(".email-feild-required").addClass("hide");
-            $(".name-feild-required").addClass("hide");
-            $(".address-feild-required").addClass("hide");
-            $(".landline-feild-required").addClass("hide");
+        if(inputwebsite.length==0){
             $(".website-feild-required").removeClass("hide");
             res=false;
         }
-        else if(address.length==0){
-            $(".mobile-feild-required").addClass("hide");
-            $(".email-feild-required").addClass("hide");
-            $(".name-feild-required").addClass("hide");
-            $(".website-feild-required").addClass("hide");
-            $(".landline-feild-required").addClass("hide");
+        if(inputaddress.length==0){
             $(".address-feild-required").removeClass("hide");
             res=false;
         }
         if(res==true){
-            $(".mobile-feild-required").addClass("hide");
-            $(".email-feild-required").addClass("hide");
-            $(".name-feild-required").addClass("hide");
-            $(".website-feild-required").addClass("hide");
-            $(".landline-feild-required").addClass("hide");
-            $(".address-feild-required").addClass("hide");
             confirmed();
             location.reload();
         }else{
             return res;
         }
       })
+      //---------functiions for taking inputs----------//
+      function name(){
+        var name = $(".input-name").val();
+        return name;
+      }
+      function email(){
+        var email = $(".input-email").val();
+        return email;
+      }
+      function mobile() {
+        var mobile = $(".input-mobile").val();
+        return mobile;
+      }
+      function landline() {
+        var landline = $(".input-landline").val();
+        return landline;
+      }
+      function website() {
+        var website = $(".input-website").val();
+        return website;
+      }
+      function address() {
+        var address = $(".input-address").val();
+        return address;
+      }
 })
 
 
