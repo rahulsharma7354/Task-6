@@ -7,7 +7,7 @@ $(function () {
     function bodyinfo( i) {
         $(".person-name").html(userrecord[i].name);
         $(".person-email").html(userrecord[i].email);
-        $(".phone-number").html(" +91 " + userrecord[i].mobile);
+        $(".phone-number").html(" +91 " + userrecord[i].number);
         $(".landline-number").html(" 0 " + userrecord[i].landline);
         $(".person-website").html(userrecord[i].website);
         $(".person-address").html(userrecord[i].address);
