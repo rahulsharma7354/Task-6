@@ -12,60 +12,57 @@ $(function () {
         $(".person-website").html(userrecord[i].website);
         $(".person-address").html(userrecord[i].address);
     }
+    $('.delete').click(function () {
+        userrecord.splice(updateindex,1);
+        localStorage.setItem("users", JSON.stringify(userrecord));
+        showData();
+        location.reload();
+    })
+
+    $(".edit").click( function () {
+        var i = window.updateindex;
+        alert(i);
+        $(".form-submit-button").addClass("hide");
+        $(".form-edit-submit-button").removeClass("hide");
+        $(".form-edit-submit-button").addClass("show");
+        $(".input-name").val(userrecord[i].name);
+        $(".input-email").val(userrecord[i].email);
+        $(".input-mobile").val(userrecord[i].number);
+        $(".input-landline").val(userrecord[i].landline);
+        $(".input-website").val(userrecord[i].website);
+        $(".input-address").val(userrecord[i].address);
+        $(".person-info").addClass("hide");
+        $(".form").addClass("show");
+        })
+        $(".form-edit-submit-button").click(function () {
+            
+            var editname = $(".input-name").val();
+            var editemail= $(".input-email").val();
+            var editmobile= $(".input-mobile").val();
+            var editlandline = $(".input-landline").val();
+            var editwebsite = $(".input-website").val();
+            var editaddress = $(".input-address").val();
+            var i = window.updateindex;
+            userrecord[i]={
+                   "name":editname,
+                   "email":editemail,
+                   "number":editmobile,
+                   "landline":editlandline,
+                   "website":editwebsite,
+                   "address":editaddress,
+            }
+            localStorage.setItem("users", JSON.stringify(userrecord));
+            showData();
+            bodyinfo(i);
+            $(".person-info").removeClass("hide");
+            $(".form").removeClass("show");
+            location.reload();
+        })
     $('.first-person-name').click(function(){
         var i =  $('.first-person-name').index(this);
         bodyinfo(i);
-        $('.delete').click(function () {
-            alert(i);
-            userrecord.splice(i,1);
-            localStorage.setItem("users", JSON.stringify(userrecord));
-            showData();
-            $(".person-name").html('');
-            $(".person-email").html('');
-            $(".phone-number").html('');
-            $(".landline-number").html('');
-            $(".person-website").html('');
-            $(".person-address").html('');
-        })
-        $(".edit").click( function () {
-            $(".form-submit-button").addClass("hide");
-            $(".form-edit-submit-button").removeClass("hide");
-            $(".form-edit-submit-button").addClass("show");
-            $(".input-name").val(userrecord[i].name);
-            $(".input-email").val(userrecord[i].email);
-            $(".input-mobile").val(userrecord[i].number);
-            $(".input-landline").val(userrecord[i].landline);
-            $(".input-website").val(userrecord[i].website);
-            $(".input-address").val(userrecord[i].address);
-            $(".person-info").addClass("hide");
-            $(".form").addClass("show");
-            $(".form-edit-submit-button").click(function () {
-                var editname = $(".input-name").val();
-                var editemail= $(".input-email").val();
-                var editmobile= $(".input-mobile").val();
-                var editlandline = $(".input-landline").val();
-                var editwebsite = $(".input-website").val();
-                var editaddress = $(".input-address").val();
-                userrecord[i]={
-                       "name":editname,
-                       "email":editemail,
-                       "number":editmobile,
-                       "landline":editlandline,
-                       "website":editwebsite,
-                       "address":editaddress,
-                }
-                localStorage.setItem("users", JSON.stringify(userrecord));
-                showData();
-                bodyinfo(i);
-                $(".person-info").removeClass("hide");
-                $(".form").removeClass("show");
-            })
-            
-        })
+        window.updateindex=i;
     });
-    $('.contact-heading').click( function () {
-        location.reload();
-    })
     function showData() {
         userrecord = JSON.parse(localStorage.getItem('users'));
         $("#firstPerson").html('');
@@ -113,16 +110,24 @@ $(function () {
         var website = $(".input-website").val();
         var address = $(".input-address").val();
         var res=true;
-        if(name.length==0){
-            $(".name-feild-required").removeClass("hide");
+
+        hideAllRequiredErrors();
+        {
             $(".email-feild-required").addClass("hide");
             $(".mobile-feild-required").addClass("hide");
             $(".landline-feild-required").addClass("hide");
             $(".website-feild-required").addClass("hide");
             $(".address-feild-required").addClass("hide");
+            $(".name-feild-required").addClass("hide");
+        }
+        if(name.length==0){
+            
+            
             res=false;
         }
-        else if(email.length==0){
+        checkIfValid(name, ".name-feild-required")
+
+        if(email.length==0){
             $(".email-feild-required").removeClass("hide");
             $(".name-feild-required").addClass("hide");
             $(".mobile-feild-required").addClass("hide");
@@ -175,12 +180,50 @@ $(function () {
             $(".landline-feild-required").addClass("hide");
             $(".address-feild-required").addClass("hide");
             confirmed();
+            location.reload();
         }else{
             return res;
         }
       })
 })
 
+
+//.........................................update and delete...........................//
+// $(".edit").click( function () {
+        //     $(".form-submit-button").addClass("hide");
+        //     $(".form-edit-submit-button").removeClass("hide");
+        //     $(".form-edit-submit-button").addClass("show");
+        //     $(".input-name").val(userrecord[i].name);
+        //     $(".input-email").val(userrecord[i].email);
+        //     $(".input-mobile").val(userrecord[i].number);
+        //     $(".input-landline").val(userrecord[i].landline);
+        //     $(".input-website").val(userrecord[i].website);
+        //     $(".input-address").val(userrecord[i].address);
+        //     $(".person-info").addClass("hide");
+        //     $(".form").addClass("show");
+            // $(".form-edit-submit-button").click(function () {
+            //     var editname = $(".input-name").val();
+            //     var editemail= $(".input-email").val();
+            //     var editmobile= $(".input-mobile").val();
+            //     var editlandline = $(".input-landline").val();
+            //     var editwebsite = $(".input-website").val();
+            //     var editaddress = $(".input-address").val();
+            //     userrecord[i]={
+            //            "name":editname,
+            //            "email":editemail,
+            //            "number":editmobile,
+            //            "landline":editlandline,
+            //            "website":editwebsite,
+            //            "address":editaddress,
+            //     }
+            //     localStorage.setItem("users", JSON.stringify(userrecord));
+            //     showData();
+            //     bodyinfo(i);
+            //     $(".person-info").removeClass("hide");
+            //     $(".form").removeClass("show");
+            // })
+            
+  //      })
 //Display in Body(JavaScript)
   // var wpEdits = document.querySelectorAll(".first-person-name");
     // for (let i = 0; i < wpEdits.length; i++)
