@@ -1,9 +1,15 @@
 $(function () {
+
+    //------------------function to display form when add is clicked---------------------//
+  
     $(".add-item").click(function () {
         $(".person-info").addClass("hide");
         $(".form").addClass("show");
     })
     showData();
+
+    //---------------------function to display complete information when clicked ------------------//
+
     function bodyinfo( i) {
         $(".person-name").html(userrecord[i].name);
         $(".person-email").html(userrecord[i].email);
@@ -12,12 +18,18 @@ $(function () {
         $(".person-website").html(userrecord[i].website);
         $(".person-address").html(userrecord[i].address);
     }
+
+    //----------function to delete the enteries-----------------------//
+    
     $('.delete').click(function () {
         userrecord.splice(updateindex,1);
         localStorage.setItem("users", JSON.stringify(userrecord));
         showData();
         location.reload();
     })
+
+   // -----------------function sets the forms values when clicked on edit --------//
+
     function setformvalue(i){
         $(".input-name").val(userrecord[i].name);
         $(".input-email").val(userrecord[i].email);
@@ -26,6 +38,9 @@ $(function () {
         $(".input-website").val(userrecord[i].website);
         $(".input-address").val(userrecord[i].address);
     }
+
+    //---------------event triggered when edit is clicked-------------------------//
+
     $(".edit").click( function () {
         var i = window.updateindex;
         $(".form-submit-button").addClass("hide");
@@ -58,11 +73,17 @@ $(function () {
             $(".form").removeClass("show");
             location.reload();
         })
+
+    //-----------function to trigger index of last click --------------------//
+
     $('.first-person-name').click(function(){
         var i =  $('.first-person-name').index(this);
         bodyinfo(i);
         window.updateindex=i;
     });
+
+    //-----------function to locate data on side section-----------------//
+
     function showData() {
         userrecord = JSON.parse(localStorage.getItem('users'));
         $("#firstPerson").html('');
@@ -77,6 +98,9 @@ $(function () {
             $("#firstPerson").html(main);
         }
     }
+
+    //----------function to store values in array--------------------//
+
     function confirmed() {
         var confirmedname = name();
         var confirmedemail= email();
@@ -85,8 +109,7 @@ $(function () {
         var confirmedwebsite =website();
         var confirmedaddress = address();
         let user_records = new Array();
-        user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
-        
+        user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []        
             user_records.push({
                 "name": confirmedname,
                 "email": confirmedemail,
@@ -102,11 +125,16 @@ $(function () {
             $(".person-info").removeClass("hide"); 
               
     }
-      $(".cancle").click(function () {
+
+    //----function called on cancel button click -------------//
+
+    $(".cancle").click(function () {
         $(".form")[0].reset()
         $(".form").removeClass("show");
         $(".person-info").removeClass("hide"); 
       })
+
+      //--------------function to validate form -----------------//
 
       $(".form-submit-button").click(function validateForm(){
         var inputname = name();
@@ -147,7 +175,9 @@ $(function () {
             return res;
         }
       })
+
       //---------functiions for taking inputs----------//
+
       function name(){
         var name = $(".input-name").val();
         return name;
