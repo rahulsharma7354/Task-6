@@ -6,6 +6,7 @@ $(function () {
         $(".person-info").addClass("hide");
         $(".form").addClass("show");
     })
+    
     sectionData();
 
     //---------------------function to display complete information when clicked ------------------//
@@ -86,7 +87,7 @@ $(function () {
     });
 
     //-----------function to locate data on side section-----------------//
-    
+
     function sectionData() {
         Record = JSON.parse(localStorage.getItem('users'));
         $("#firstPerson").html('');
