@@ -6,7 +6,7 @@ $(function () {
         $(".person-info").addClass("hide");
         $(".form").addClass("show");
     })
-    
+
     sectionData();
 
     //---------------------function to display complete information when clicked ------------------//
@@ -31,6 +31,7 @@ $(function () {
         sectionData();
         location.reload();
     })
+
 
    // -----------------function sets the forms values when clicked on edit --------//
 
@@ -59,8 +60,8 @@ $(function () {
             var editemail=  $(".input-email").val();
             var editmobile= $(".input-mobile").val();
             var editlandline = $(".input-landline").val();
-            var editwebsite = $(".input-website").val()
-            var editaddress = $(".input-address").val()
+            var editwebsite = $(".input-website").val();
+            var editaddress = $(".input-address").val();
             var index = window.updateindex;
             Record[index]={
                    "name":editname,
@@ -81,9 +82,9 @@ $(function () {
     //-----------function to trigger index of last click --------------------//
 
     $('.first-person-name').click(function(){
-        var i =  $('.first-person-name').index(this);
-        bodyinfo(i);
-        window.updateindex=i;
+        var index =  $('.first-person-name').index(this);
+        bodyinfo(index);
+        window.updateindex=index;
     });
 
     //-----------function to locate data on side section-----------------//
