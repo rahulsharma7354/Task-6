@@ -141,7 +141,7 @@ $(function () {
 
     //----function called on cancel button click -------------//
     
-    function editRequiredFeild(){
+    function toggleRequiredFeild(){
         $(".name-feild-required").addClass("hide");
         $(".input-name").removeClass("border-color");
         $(".email-feild-required").addClass("hide");
@@ -157,7 +157,7 @@ $(function () {
     }
     $(".cancle-button").click(function () {
         $(".contact-form")[0].reset();
-        editRequiredFeild();
+        toggleRequiredFeild();
         $(".contact-form").removeClass("show");
         $(".person-details").removeClass("hide");
     })
