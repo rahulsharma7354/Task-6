@@ -3,24 +3,26 @@ $(function () {
     //------------------function to display form when add is clicked---------------------//
 
     $(".add-item").click(function () {
-        $(".person-info").addClass("hide");
-        $(".form").addClass("show");
+        $(".person-details").addClass("hide");
+        $(".contact-form").addClass("show");
     })
 
-    sectionData();
+    displayContact();
 
     //---------------------function to display complete information when clicked ------------------//
 
-    function bodyinfo(index) {
-        if (index == null) {
+    function contactDetails(index) {
+        if (index != null) {
+            $(".person-name").html(Record[index].name);
+            $(".person-email").html(Record[index].email);
+            $(".phone-number").html(" +91 " + Record[index].number);
+            $(".landline-number").html(" 0 " + Record[index].landline);
+            $(".person-website").html(Record[index].website);
+            $(".person-address").html(Record[index].address);  
+        }else{
             alert("Please Select the Person to display data");
         }
-        $(".person-name").html(Record[index].name);
-        $(".person-email").html(Record[index].email);
-        $(".phone-number").html(" +91 " + Record[index].number);
-        $(".landline-number").html(" 0 " + Record[index].landline);
-        $(".person-website").html(Record[index].website);
-        $(".person-address").html(Record[index].address);
+        
     }
 
     //----------function to delete the enteries-----------------------//
@@ -28,10 +30,9 @@ $(function () {
     $('.delete').click(function () {
         Record.splice(updateindex, 1);
         localStorage.setItem("users", JSON.stringify(Record));
-        sectionData();
+        displayContact();
         location.reload();
     })
-
 
     // -----------------function sets the forms values when clicked on edit --------//
 
@@ -52,8 +53,8 @@ $(function () {
         $(".form-edit-button").removeClass("hide");
         $(".form-edit-button").addClass("show");
         setFormValue(index);
-        $(".person-info").addClass("hide");
-        $(".form").addClass("show");
+        $(".person-details").addClass("hide");
+        $(".contact-form").addClass("show");
     })
     $(".form-edit-button").click(function () {
         var editname = $(".input-name").val();
@@ -72,26 +73,40 @@ $(function () {
             "address": editaddress,
         }
         localStorage.setItem("users", JSON.stringify(Record));
-        sectionData();
-        bodyinfo(index);
-        $(".person-info").removeClass("hide");
-        $(".form").removeClass("show");
+        displayContact();
+        contactDetails(index);
+        $(".person-details").removeClass("hide");
+        $(".contact-form").removeClass("show");
         location.reload();
     })
+    
+    //-------------------To check contacts are present or not ---------------------//
+    
+    var checkEmpty = $(".first-person").text();
+    if(checkEmpty==""){
+        $('.no-contacts').removeClass("hide");
+        $('.contacts').addClass("hide");
+        $('.icons').addClass("hide"); 
+    }else{
+        $('.no-contacts').addClass("hide");
+        $('.contacts').removeClass("hide");
+        $('.icons').removeClass("hide");
+    }
 
     //-----------function to trigger index of last click --------------------//
 
     $('.first-person-name').click(function () {
         var index = $('.first-person-name').index(this);
-        bodyinfo(index);
+        contactDetails(index);
         window.updateindex = index;
     });
 
     //-----------function to locate data on side section-----------------//
 
-    function sectionData() {
+    function displayContact() {
         Record = JSON.parse(localStorage.getItem('users'));
         $("#firstPerson").html('');
+        
         main = "";
         for (let n in Record) {
             var str = '<div class ="boundary">';
@@ -106,7 +121,7 @@ $(function () {
 
     //----------function to store values in array--------------------//
 
-    function storeData() {
+    function saveContacts() {
         let user_records = new Array();
         user_records = JSON.parse(localStorage.getItem("users")) ? JSON.parse(localStorage.getItem("users")) : []
         user_records.push({
@@ -118,22 +133,37 @@ $(function () {
             "address": window.inputaddress
         })
         localStorage.setItem("users", JSON.stringify(user_records));
-        sectionData();
-        $(".form")[0].reset();
-        $(".form").removeClass("show");
-        $(".person-info").removeClass("hide");
+        displayContact();
+        $(".contact-form")[0].reset();
+        $(".contact-form").removeClass("show");
+        $(".person-details").removeClass("hide");
     }
 
     //----function called on cancel button click -------------//
-
-    $(".cancle").click(function () {
-        $(".form")[0].reset()
-        $(".form").removeClass("show");
-        $(".person-info").removeClass("hide");
+    
+    function editRequiredFeild(){
+        $(".name-feild-required").addClass("hide");
+        $(".input-name").removeClass("border-color");
+        $(".email-feild-required").addClass("hide");
+        $(".input-email").removeClass("border-color");
+        $(".mobile-feild-required").addClass("hide");
+        $(".input-mobile").removeClass("border-color");
+        $(".landline-feild-required").addClass("hide");
+        $(".input-landline").removeClass("border-color");
+        $(".website-feild-required").addClass("hide");
+        $(".input-website").removeClass("border-color");
+        $(".address-feild-required").addClass("hide");
+        $(".input-address").removeClass("border-color");
+    }
+    $(".cancle-button").click(function () {
+        $(".contact-form")[0].reset();
+        editRequiredFeild();
+        $(".contact-form").removeClass("show");
+        $(".person-details").removeClass("hide");
     })
 
     //--------------function to validate form -----------------//
-
+    
     $(".form-submit-button").click(function validateForm() {
         window.inputname = $(".input-name").val();
         window.inputemail = $(".input-email").val();
@@ -144,32 +174,45 @@ $(function () {
         var res = true;
         if (inputname.length == 0) {
             $(".name-feild-required").removeClass("hide");
+            $(".input-name").addClass("border-color");
             res = false;
         }
         if (inputemail.length == 0) {
             $(".email-feild-required").removeClass("hide");
+            $(".input-email").addClass("border-color");
             res = false;
         }
         if (inputmobile.length == 0) {
             $(".mobile-feild-required").removeClass("hide");
+            $(".input-mobile").addClass("border-color");
             res = false;
         }
         if (inputlandline.length == 0) {
             $(".landline-feild-required").removeClass("hide");
+            $(".input-landline").addClass("border-color");
             res = false;
         }
+
+        if (!(/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/|www\.)[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/.test(inputwebsite))) {
+            res=false;
+        }
+
         if (inputwebsite.length == 0) {
             $(".website-feild-required").removeClass("hide");
+            $(".input-website").addClass("border-color");
             res = false;
         }
         if (inputaddress.length == 0) {
             $(".address-feild-required").removeClass("hide");
+            $(".input-address").addClass("border-color");
             res = false;
         }
         if (res == true) {
-            storeData();
+            saveContacts();
             location.reload();
         } else {
+            $('.invalid-url').removeClass("hide");
+            $(".input-website").addClass("border-color");
             return res;
         }
     })

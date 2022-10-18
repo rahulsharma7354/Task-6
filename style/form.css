@@ -1,4 +1,4 @@
-.form{
+.contact-form{
     width: 34rem;
     padding-top:1rem;
     padding-left: 1rem;
@@ -8,6 +8,7 @@
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
 }
+
 .show{
     display: block;
 }
@@ -87,6 +88,9 @@
     width: 23.5rem;
     height: 8rem;
 }
+.border-color{
+    border-color: red;
+}
 #address{
     font-size: 0.8rem;
     margin-bottom: 0px;
@@ -96,7 +100,12 @@
 .second-containe{
     display: flex;
 }
-.cancle{
+.button-container{
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.cancle-button{
     font-family: 'Hind', sans-serif;
     font-size: 14px;
     background-color:rgb(46, 130, 3) ;
@@ -105,14 +114,13 @@
     width: 4.8rem;
     padding-top: 8px;
     height: 1.6rem;
-    margin-top: 1%;
-    margin-left: 24rem;
+    margin-left: 15rem;
+    
 }
 .form-submit-button{
     font-family: 'Hind', sans-serif;
     font-size: 14px;
-    margin-top: 10px;
-    margin-left: 24rem;
+    margin-left: 2rem;
     padding-top: 8px;
     padding-left: 2.4rem;
     background-color: rgb(46, 130, 3);
@@ -123,8 +131,7 @@
 .form-edit-button{
     font-family: 'Hind', sans-serif;
     font-size: 14px;
-    margin-top: 10px;
-    margin-left: 24rem;
+    margin-left: 2rem;
     padding-top: 8px;
     padding-left: 2.4rem;
     background-color: rgb(46, 130, 3);

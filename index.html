@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,82 +8,91 @@
     <title>TECHNOVERT</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/style/Index.css"> 
+    <link rel="stylesheet" href="/style/Index.css">
     <link rel="stylesheet" href="/style/form.css">
-    <script
-    src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <header>
     <div class="header-section">
         <h1 class="header-content">Address Book</h1>
-    </div> 
+    </div>
     <ul class="bar">
-        <li class="bar-element home" ><a href="#home"> HOME</a></li>
+        <li class="bar-element home"><a href="#home"> HOME</a></li>
         <li class="bar-element add-item"><a class="add-items">+ADD</a></li>
         <li class="icon">
-          <img class="icon" src="/images/blog-icon.png" alt="Blog Icon" />
+            <img class="icon" src="/images/blog-icon.png" alt="Blog Icon" />
         </li>
     </ul>
 </header>
+
 <body>
     <div class="container">
-    
-    <section class="people-queue">
-        <h3 class="contact-heading">CONTACTS</h3>
-        <div class="first-person showUsers" id="firstPerson">
-            <!-- <h1 class="first-person-name input"></h1>
+
+        <section class="people-queue">
+            <h3 class="contact-heading">CONTACTS</h3>
+            <h3 class="no-contacts red hide">No Contacts</h3>
+            <div class="first-person showUsers" id="firstPerson">
+                <!-- <h1 class="first-person-name input"></h1>
             <p class="first-person-email"></p>
             <p class="first-person-number"></p> -->
-        </div>
-    </section>
-    <section class="info-section">
-        <form class="form" action="" onsubmit="return validateForm()">
-            <p class="name">Name </p>
-            <input class="input-name" id="name" type="text" required="required"><span class="hide red name-feild-required"> *Required</span>
-            <p class="form-email">Email </p>
-            <input class="input-email"type="email" required="required"><span class="hide red email-feild-required"> *Required</span>
-            <div class="container">
-            <div class="mobile-number">
-                <p id="mobileNumber">Mobile </p>
-                <input class="input-mobile" type="number" required="required"><span class="hide red mobile-feild-required"> *Req</span>
             </div>
-            <div class="landline-number-text">
-                <p id="landlineNumber">Landline </p>
-                <input class="input-landline" type="number" required="required"><span class="hide red landline-feild-required"> *Required</span>
+        </section>
+        <section class="info-section">
+            <form class="contact-form" action="" onsubmit="return validateForm()">
+                <p class="name">Name<span class="hide red name-feild-required"> *Required</span></p>
+                <input class="input-name " id="name" type="text" required="required">
+                <p class="form-email">Email <span class="hide red email-feild-required">*Required</span> </p>
+                <input class="input-email" type="email" required="required">
+                <div class="container">
+                    <div class="mobile-number">
+                        <p id="mobileNumber">Mobile <span class="hide red mobile-feild-required"> *Required</span> </p>
+                        <input class="input-mobile" type="number" required="required">
+                    </div>
+                    <div class="landline-number-text">
+                        <p id="landlineNumber">Landline <span class="hide red landline-feild-required"> *Required</span> </p>
+                        <input class="input-landline" type="number" required="required">
+                    </div>
+                </div>
+                <p id="personWebsite">Website <span class="hide red website-feild-required"> *Required</span> <span class="hide red invalid-url">  *Invalid URL</span> </p>
+                <input class="input-website" for="field" name="field" type="text" required="required">
+                <p id="address">Address &nbsp <span class="hide red address-feild-required"> *Required</span></p>
+                <textarea class="input-address" cols="30" rows="10" required="required"></textarea>
+                <div class="button-container">
+                <div class="cancle-button">Cancel</div>
+                <span class="form-submit-button show submit-button" type="submit" value="submit">Add</span>
+                <span class="form-edit-button hide submit-button" type="submit" value="submit">Add</span>
             </div>
+            </form>
+            <div class="person-details">
+                <div>
+                    <h2 class="person-name"></h2>
+                    <span class="icons hide">
+                        <img src="/images/edit1.jpg" alt="" width=8%>
+                        <span class="edit">EDIT</span>
+                        <img src="/images/delete1.png" alt="" width=8%>
+                        <span class="delete">DELETE</span>
+                    </span>
+                </div>
+                <div class="contacts hide">
+                    <p class="email">Email: <span class="person-email"></span></p>
+                    <p class="phone">Mobile: <span class="phone-number"></span></p>
+                    <p class="landline">Landline: <span class="landline-number"></span></p>
+                    <p class="website">Website: <span class="person-website"></span></p>
+                    <p class="address">Address: <span class="person-address"></span></p>
+                </div>
             </div>
-            <p id="personWebsite">Website </p>
-            <input class="input-website" type="text" required="required"><span class="hide red website-feild-required"> *Required</span>
-            <p id="address">Address &nbsp</p>
-            <textarea class="input-address" cols="30" rows="10" required="required"></textarea><span class="hide red address-feild-required"> *Required</span>
-            <div class="cancle" value="cancle">Cancel</div>
-            <span class="form-submit-button show submit-button" type="submit" value="submit">Add</span>
-            <span class="form-edit-button hide submit-button" type="submit" value="submit">Add</span>
-        </form>
-        <div class="person-info">
-        <div>
-        <h2 class="person-name"></h2>
-        <span class="icons">
-        <img src="/images/edit1.jpg" alt=""width=8%>
-        <span class="edit">EDIT</span>
-        <img src="/images/delete1.png" alt=""width=8%>
-        <span class="delete">DELETE</span>
-        </span>
-        </div>
-        <p class="email">Email: <span class="person-email"></span></p>
-        <p class="phone">Mobile: <span class="phone-number"></span></p>
-        <p class="landline">Landline: <span class="landline-number"></span></p>
-        <p class="website">Website: <span class="person-website"></span></p>
-        <p class="address">Address:  <span class="person-address"></span></p>
-    </div>
-    </section>
+        </section>
     </div>
     <script src="/javaScript/form.js"></script>
 </body>
