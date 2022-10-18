@@ -142,6 +142,7 @@ $(function () {
     //----function called on cancel button click -------------//
     
     function toggleRequiredFeild(){
+        $('.invalid-url').addClass("hide");
         $(".name-feild-required").addClass("hide");
         $(".input-name").removeClass("border-color");
         $(".email-feild-required").addClass("hide");
