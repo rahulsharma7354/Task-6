@@ -108,15 +108,15 @@ li.icon {
   height: 2.5rem;
   font-family: 'Hind', sans-serif;
   margin-left: 1rem;
-  margin-top: 0px;
-  margin-bottom: 8px;
+  padding-top: 2px;
+  margin-bottom: 0px;
   font-weight: 100;
   font-size: 2rem;
 }
 
 .first-person-email {
   font-family: 'Hind', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin-left: 1rem;
   margin-top: 0px;
@@ -125,11 +125,11 @@ li.icon {
 
 .first-person-number {
   font-family: 'Hind', sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 600;
   margin-left: 1rem;
   margin-top: 0px;
-  margin-bottom: 0px;
+  margin-bottom: 6px;
 }
 .boundary{
   border: 1px solid rgb(155, 152, 152);
@@ -152,6 +152,7 @@ li.icon {
   font-family: 'Hind', sans-serif;
   letter-spacing: 1.25px;
   font-size: 1.8rem;
+  
   color: #333;
   height: 2rem;
   font-weight: 600;
@@ -177,7 +178,7 @@ li.icon {
 }
 
 .email {
-  margin-top: 0px;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
   text-shadow: 0.3px 0.3px black;
@@ -189,7 +190,7 @@ li.icon {
   margin-bottom: 0px;
   padding-bottom: 0px;
   font-size: 0.95rem;
-  margin-top: 8px;
+  margin-top: 0px;
   text-shadow: 0.3px 0.3px black;
   color: #333;
   height: 1.2rem;

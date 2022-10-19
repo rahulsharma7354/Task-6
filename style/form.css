@@ -1,5 +1,5 @@
 .contact-form{
-    width: 34rem;
+    width: 33rem;
     padding-top:1rem;
     padding-left: 1rem;
     display: none;
@@ -23,38 +23,41 @@
     margin-bottom: 0px;
     margin-top: 0px;
     font-weight:900;
+    color: black;
     font-family: 'Hind', sans-serif;
 }
 .input-name{
     width: 23.6rem;
     height: 2rem;
     border: 1px solid black;
-    margin-bottom: 0.3rem
+    margin-bottom: 0.7rem
 }
 .form-email{
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
+    color: black;
     font-family: 'Hind', sans-serif;
 }
 .input-email{
     width: 23.6rem;
     margin-top: 0px;
     height: 2rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.7rem;
     border: 1px solid black;
 }
 #mobileNumber{
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
+    color: black;
     font-family: 'Hind', sans-serif;
 }
 .input-mobile{
     height: 2rem;
     width: 10.5rem;
     border: 1px solid black;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.7rem;
 }
 .landline-number-text{
     margin-left: 2rem;
@@ -68,6 +71,7 @@
 .input-landline{
     height: 2rem;
     width: 11rem;
+    margin-bottom: 0.7rem;
     border: 1px solid black;
 }
 #personWebsite{
@@ -80,6 +84,7 @@
 .input-website{
     width: 23.6rem;
     height: 2rem;
+    margin-bottom: 0.7rem;
     border: 1px solid black;
 }
 .input-address{
