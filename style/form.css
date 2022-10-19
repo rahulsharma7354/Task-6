@@ -1,6 +1,6 @@
-.contact-form{
+.contact-form {
     width: 33rem;
-    padding-top:1rem;
+    padding-top: 1rem;
     padding-left: 1rem;
     display: none;
     border: 1px solid black;
@@ -9,120 +9,140 @@
     margin-bottom: 1rem;
 }
 
-.show{
+.show {
     display: block;
 }
-.hide{
+
+.hide {
     display: none;
 }
-.contact{
+
+.contact {
     display: flex;
 }
-.name{
+
+.name {
     font-size: 0.8rem;
     margin-bottom: 0px;
     margin-top: 0px;
-    font-weight:900;
+    font-weight: 900;
     color: black;
     font-family: 'Hind', sans-serif;
 }
-.input-name{
+
+.input-name {
     width: 23.6rem;
     height: 2rem;
     border: 1px solid black;
     margin-bottom: 0.7rem
 }
-.form-email{
+
+.form-email {
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
     color: black;
     font-family: 'Hind', sans-serif;
 }
-.input-email{
+
+.input-email {
     width: 23.6rem;
     margin-top: 0px;
     height: 2rem;
     margin-bottom: 0.7rem;
     border: 1px solid black;
 }
-#mobileNumber{
+
+#mobileNumber {
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
     color: black;
     font-family: 'Hind', sans-serif;
 }
-.input-mobile{
+
+.input-mobile {
     height: 2rem;
     width: 10.5rem;
     border: 1px solid black;
     margin-bottom: 0.7rem;
 }
-.landline-number-text{
+
+.landline-number-text {
     margin-left: 2rem;
 }
-#landlineNumber{
+
+#landlineNumber {
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
     font-family: 'Hind', sans-serif;
 }
-.input-landline{
+
+.input-landline {
     height: 2rem;
     width: 11rem;
     margin-bottom: 0.7rem;
     border: 1px solid black;
 }
-#personWebsite{
+
+#personWebsite {
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
     margin-bottom: 0.4rem;
     font-family: 'Hind', sans-serif;
 }
-.input-website{
+
+.input-website {
     width: 23.6rem;
     height: 2rem;
     margin-bottom: 0.7rem;
     border: 1px solid black;
 }
-.input-address{
+
+.input-address {
     display: block;
     border: 1px solid black;
     width: 23.5rem;
     height: 8rem;
 }
-.border-color{
+
+.border-color {
     border-color: red;
 }
-#address{
+
+#address {
     font-size: 0.8rem;
     margin-bottom: 0px;
     font-weight: 900;
     font-family: 'Hind', sans-serif;
 }
-.second-containe{
+
+.second-containe {
     display: flex;
 }
-.button-container{
+
+.button-container {
     display: flex;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.cancle-form-btn{
+
+.cancle-form-btn {
     font-family: 'Hind', sans-serif;
     font-size: 14px;
-    background-color:rgb(46, 130, 3) ;
+    background-color: rgb(46, 130, 3);
     color: white;
     padding-left: 2rem;
     width: 6.5rem;
     padding-top: 8px;
     height: 2rem;
     margin-left: 15rem;
-    
+
 }
-.form-submit-button{
+
+.form-submit-button {
     font-family: 'Hind', sans-serif;
     font-size: 14px;
     margin-left: 2rem;
@@ -133,7 +153,8 @@
     color: white;
     height: 2rem;
 }
-.form-edit-button{
+
+.form-edit-button {
     font-family: 'Hind', sans-serif;
     font-size: 14px;
     margin-left: 2rem;

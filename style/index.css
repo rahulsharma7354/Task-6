@@ -3,6 +3,7 @@
   width: 100%;
   height: 8em;
 }
+
 .header-content {
   position: absolute;
   font-size: 350%;
@@ -13,7 +14,8 @@
   letter-spacing: 2px;
   font-family: 'Hind', sans-serif;
 }
-.boundary:hover{
+
+.boundary:hover {
   background-color: rgb(217, 240, 247);
 }
 
@@ -62,7 +64,8 @@ li.icon {
   margin-right: 2%;
   padding-top: 6px;
 }
-.border-color{
+
+.border-color {
   border-color: red;
 }
 
@@ -75,12 +78,14 @@ li.icon {
   height: 55vh;
   width: 30%;
 }
-.delete-image{
+
+.delete-image {
   margin-bottom: 0.7rem;
 }
+
 .contact-heading {
-  font-family: 'Gill Sans', 
-  'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: 'Gill Sans',
+    'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: large;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -88,7 +93,8 @@ li.icon {
   margin-top: 1rem;
 
 }
-.no-contacts-heading{
+
+.no-contacts-heading {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 1.5rem;
   color: #333;
@@ -131,11 +137,13 @@ li.icon {
   margin-top: 0px;
   margin-bottom: 6px;
 }
-.boundary{
+
+.boundary {
   border: 1px solid rgb(155, 152, 152);
   border-top: 0px;
 }
-.top-border{
+
+.top-border {
   border-top: 1px solid rgb(155, 152, 152);
   display: none;
 }
@@ -147,12 +155,13 @@ li.icon {
   margin-top: 1.5rem;
   padding-top: 1rem;
 }
+
 .person-name {
   display: inline;
   font-family: 'Hind', sans-serif;
   letter-spacing: 1.25px;
   font-size: 1.8rem;
-  
+
   color: #333;
   height: 2rem;
   font-weight: 600;
@@ -172,7 +181,8 @@ li.icon {
   padding-bottom: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.person-details{
+
+.person-details {
   padding-left: 3rem;
   padding-top: 1rem;
 }
@@ -222,9 +232,11 @@ li.icon {
 .person-address {
   width: 50%;
 }
-.blue{
+
+.blue {
   background-color: rgb(216, 232, 245);
 }
-.red{
+
+.red {
   color: red;
 }
