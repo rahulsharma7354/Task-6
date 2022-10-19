@@ -67,7 +67,7 @@
 }
 .input-landline{
     height: 2rem;
-    width: 10.5rem;
+    width: 11rem;
     border: 1px solid black;
 }
 #personWebsite{
@@ -105,15 +105,15 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
-.cancle-button{
+.cancle-form-btn{
     font-family: 'Hind', sans-serif;
     font-size: 14px;
     background-color:rgb(46, 130, 3) ;
     color: white;
     padding-left: 2rem;
-    width: 4.8rem;
+    width: 6.5rem;
     padding-top: 8px;
-    height: 1.6rem;
+    height: 2rem;
     margin-left: 15rem;
     
 }
@@ -124,9 +124,9 @@
     padding-top: 8px;
     padding-left: 2.4rem;
     background-color: rgb(46, 130, 3);
-    width: 4.5rem;
+    width: 6.5rem;
     color: white;
-    height: 1.6rem;
+    height: 2rem;
 }
 .form-edit-button{
     font-family: 'Hind', sans-serif;
@@ -135,7 +135,7 @@
     padding-top: 8px;
     padding-left: 2.4rem;
     background-color: rgb(46, 130, 3);
-    width: 4.5rem;
+    width: 6.5rem;
     color: white;
-    height: 1.6rem;
+    height: 2rem;
 }

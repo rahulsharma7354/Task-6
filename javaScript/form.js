@@ -84,11 +84,11 @@ $(function () {
     
     var checkEmpty = $(".first-person").text();
     if(checkEmpty==""){
-        $('.no-contacts').removeClass("hide");
+        $('.no-contacts-heading').removeClass("hide");
         $('.contacts').addClass("hide");
         $('.icons').addClass("hide"); 
     }else{
-        $('.no-contacts').addClass("hide");
+        $('.no-contacts-heading').addClass("hide");
         $('.contacts').removeClass("hide");
         $('.icons').removeClass("hide");
     }
@@ -116,7 +116,9 @@ $(function () {
             str += '</div>'
             main += str;
             $("#firstPerson").html(main);
+            $('.first-person').addClass('show');
         }
+
     }
 
     //----------function to store values in array--------------------//
@@ -156,7 +158,7 @@ $(function () {
         $(".address-feild-required").addClass("hide");
         $(".input-address").removeClass("border-color");
     }
-    $(".cancle-button").click(function () {
+    $(".cancle-form-btn").click(function () {
         $(".contact-form")[0].reset();
         toggleRequiredFeild();
         $(".contact-form").removeClass("show");

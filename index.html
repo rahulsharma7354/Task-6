@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TECHNOVERT</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@200&display=swap"
@@ -24,10 +27,10 @@
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 </head>
 <header>
-    <div class="header-section">
-        <h1 class="header-content">Address Book</h1>
+    <div class="header-section bg-primary">
+        <h1 class="header-content white-text">Address Book</h1>
     </div>
-    <ul class="bar">
+    <ul class="bar navbar-dark bg-dark">
         <li class="bar-element home"><a href="#home"> HOME</a></li>
         <li class="bar-element add-item"><a class="add-items">+ADD</a></li>
         <li class="icon">
@@ -37,39 +40,39 @@
 </header>
 
 <body>
-    <div class="container">
+    <div class="contact-container">
 
         <section class="people-queue">
             <h3 class="contact-heading">CONTACTS</h3>
-            <h3 class="no-contacts red hide">No Contacts</h3>
-            <div class="first-person showUsers" id="firstPerson">
+            <h3 class="no-contacts-heading red hide">No Contacts</h3>
+            <div class="first-person showUsers top-border" id="firstPerson">
                 <!-- <h1 class="first-person-name input"></h1>
             <p class="first-person-email"></p>
             <p class="first-person-number"></p> -->
             </div>
         </section>
         <section class="info-section">
-            <form class="contact-form" action="" onsubmit="return validateForm()">
+            <form class="contact-form z-depth-2" action="" onsubmit="return validateForm()">
                 <p class="name">Name<span class="hide red name-feild-required"> *Required</span></p>
-                <input class="input-name " id="name" type="text" required="required">
+                <input class="input-name form-control " id="name " type="text" required="required">
                 <p class="form-email">Email <span class="hide red email-feild-required">*Required</span> </p>
-                <input class="input-email" type="email" required="required">
-                <div class="container">
+                <input class="input-email form-control" type="email" required="required">
+                <div class="contact-container">
                     <div class="mobile-number">
                         <p id="mobileNumber">Mobile <span class="hide red mobile-feild-required"> *Required</span> </p>
-                        <input class="input-mobile" type="number" required="required">
+                        <input class="input-mobile form-control" type="number" required="required">
                     </div>
                     <div class="landline-number-text">
                         <p id="landlineNumber">Landline <span class="hide red landline-feild-required"> *Required</span> </p>
-                        <input class="input-landline" type="number" required="required">
+                        <input class="input-landline form-control" type="number" required="required">
                     </div>
                 </div>
                 <p id="personWebsite">Website <span class="hide red website-feild-required"> *Required</span> <span class="hide red invalid-url">  *Invalid URL</span> </p>
-                <input class="input-website" for="field" name="field" type="text" required="required">
+                <input class="input-website form-control" for="field" name="field" type="text" required="required">
                 <p id="address">Address &nbsp <span class="hide red address-feild-required"> *Required</span></p>
-                <textarea class="input-address" cols="30" rows="10" required="required"></textarea>
+                <textarea class="input-address form-control" cols="30" rows="10" required="required"></textarea>
                 <div class="button-container">
-                <div class="cancle-button">Cancel</div>
+                <div class="cancle-form-btn ">Cancel</div>
                 <span class="form-submit-button show submit-button" type="submit" value="submit">Add</span>
                 <span class="form-edit-button hide submit-button" type="submit" value="submit">Add</span>
             </div>
@@ -80,7 +83,7 @@
                     <span class="icons hide">
                         <img src="/images/edit1.jpg" alt="" width=8%>
                         <span class="edit">EDIT</span>
-                        <img src="/images/delete1.png" alt="" width=8%>
+                        <img  class="delete-image" src="/images/delete1.png" alt="" width=8%>
                         <span class="delete">DELETE</span>
                     </span>
                 </div>
